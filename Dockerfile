@@ -14,5 +14,6 @@ RUN pip install --no-cache-dir pytesseract
 EXPOSE 8080
 
 # Run run.py when the container launches
-ENTRYPOINT ["sh", "-c", "PORT=8080 python run.py"]
+ENTRYPOINT ["sh", "-c", "unset PORT && python run.py"]
+
 
