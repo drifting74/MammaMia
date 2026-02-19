@@ -61,7 +61,8 @@ UT_PROXY = CAPTCHA['Uprot']['UT_PROXY']
 GENERAL = config['General']
 dotenv = GENERAL["load_env"]
 HOST = GENERAL["HOST"]
-PORT = GENERAL["PORT"]
+import os
+PORT = int(os.getenv('PORT', GENERAL["PORT"]))
 Icon = GENERAL["Icon"]
 Name = GENERAL["Name"]
 LEVEL = GENERAL["level"]
