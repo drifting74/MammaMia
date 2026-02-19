@@ -359,4 +359,6 @@ async def update(request: Request):
 
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run("run:app", host=HOST, port=PORT, log_level=level)    
+import os
+PORT = int(os.getenv('PORT', 8080))
+uvicorn.run("run:app", host=HOST, port=PORT, log_level=level)
